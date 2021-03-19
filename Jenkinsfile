@@ -10,7 +10,7 @@ pipeline {
       // agent { docker { image 'maven:latest' }  }
       // agent { docker { image 'node:13.8' }  }
       environment{
-      registry = "csabaazari/currency-exchange-devops11"
+      registry = "kissbence599/maven-test"
       dockerHome = tool 'myDocker'
       mavenHome = tool 'myMaven'
       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
@@ -68,7 +68,7 @@ pipeline {
                             steps {
                             //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
                             script {
-                               dockerImage = docker.build("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
+                               dockerImage = docker.build("kissbence599/maven-test:${env.BUILD_TAG}")
 
                              //  dockerImage = docker.run ("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
                                 }
@@ -76,7 +76,7 @@ pipeline {
                         }
                         stage ('Run docker image') {
                             steps {
-                            sh "docker run -d -p 8000:8000 csabaazari/currency-exchange-devops11:${env.BUILD_TAG}"
+                            sh "docker run -d -p 8000:8000 kissbence599/maven-test:${env.BUILD_TAG}"
                             }
                         }
       }
