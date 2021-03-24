@@ -7,8 +7,6 @@
 
 pipeline {
        agent any
-      // agent { docker { image 'maven:latest' }  }
-      // agent { docker { image 'node:13.8' }  }
       environment{
       registry = "kissbence599/maven-test"
       dockerHome = tool 'myDocker'
