@@ -80,7 +80,7 @@ pipeline {
                 echo 'Im awsome. I run always'
             }
             success {
-                echo 'I run when you are hehehehehehehehehehehe'
+                echo 'I run when you are hehe'
             }
             failure {
                  echo 'I run when you fail HAH'
