@@ -77,7 +77,7 @@ pipeline {
       }
       post {
             always {
-                echo 'Im awsome. I run always'
+                echo 'Im awsome. I run akéladnédasvlways'
             }
             success {
                 echo 'I run when you are hehe'
