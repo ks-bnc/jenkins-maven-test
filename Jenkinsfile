@@ -71,7 +71,7 @@ pipeline {
                         }
                         stage ('Run docker image') {
                             steps {
-                            sh "docker run -d -p 8000:8000 kissbence599/maven-test:${env.BUILD_TAG}"
+                            sh "docker run -d -p 8100:8100 kissbence599/maven-test:${env.BUILD_TAG}"
                             }
                         }
       }
