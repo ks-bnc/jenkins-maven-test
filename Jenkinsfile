@@ -77,13 +77,13 @@ pipeline {
       }
       post {
             always {
-                echo 'Im awsome. I run akéladnédasvlways'
+                echo 'Im awsome. I run always.'
             }
             success {
-                echo 'I run when you are hehe'
+                echo 'I run when you are successful'
             }
             failure {
-                 echo 'I run when you faiil'
+                 echo 'I run when you fail'
             }
       }
 
